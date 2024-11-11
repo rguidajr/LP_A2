@@ -7,6 +7,5 @@ Linguagem de programação do curso de matemática aplicada da FGV, sob orienta�
 Alunos:
 
 Romolo Guida 
-
 Maia Ribeiro
 
