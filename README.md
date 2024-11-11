@@ -5,5 +5,6 @@ Desenvolver um jogo em pygame que será avaliado e vale como nota da segunda pro
 Linguagem de programação do curso de matemática aplicada da FGV, sob orientação do Prof. Matheus Werner.
 
 Alunos:
-Romolo Guida
+Romolo Guida /n
 Maia Ribeiro
+
