@@ -1,0 +1,25 @@
+# Arquivos a serem ignorados pelo Git
+
+# Ambiente virtual
+venv/
+
+# Cache e arquivos compilados
+__pycache__/
+*.pyc
+*.pyo
+
+# Configurações do VSCode
+.vscode/
+
+# Logs e backups
+*.log
+*.swp
+*.swo
+*~
+
+# Arquivos de compilação LaTeX
+docs/*.aux
+docs/*.toc
+docs/*.log
+docs/*.out
+docs/*.pdf
