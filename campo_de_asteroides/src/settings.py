@@ -9,7 +9,7 @@ class Settings:
         # Configurações de tela
         self.width = 1200 # Largura da tela
         self.height = 720 # Altura da tela
-        screen_size = (self.width, self.height)
+        #screen_size = (self.width, self.height)
 
         # Inicialização da tela
         self.screen = pygame.display.set_mode((self.width, self.height))  # Inicializa a janela
