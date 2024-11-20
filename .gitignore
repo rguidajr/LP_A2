@@ -1,0 +1,26 @@
+# Ignorar o ambiente virtual
+venv/
+
+# Ignorar cache e arquivos compilados do Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar logs
+*.log
+
+# Ignorar arquivos de backup ou temporários gerados por editores
+*.swp
+*.swo
+*~
+*.tmp
+
+# Ignorar arquivos gerados pelo macOS
+.DS_Store
+
+# Ignorar arquivos de compilação LaTeX
+docs/*.aux
+docs/*.toc
+docs/*.log
+docs/*.out
+docs/*.pdf  # Se não quiser versionar o PDF gerado
