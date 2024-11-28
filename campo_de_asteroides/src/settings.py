@@ -21,17 +21,17 @@ class Settings:
         image_path = os.path.join(base_path, '../assets/imagens/background.png') # Caminho relativo ao fundo
 
         try:
-            # Carrega a imagem de fundo e ajusta seu tamanho para preencher a tela
+            # Carrega o pano de fundo e ajusta seu tamanho para preencher a tela
             self.background = pygame.image.load(image_path).convert()
             self.background = pygame.transform.scale(self.background, (self.width, self.height))
         except pygame.error as e:
             # Caso o arquivo não seja encontrado ou não carregue, exibe um erro e usa uma tela de fundo preto
-            print(f"Erro ao carregar a imagem de fundo: {e}")
+            print(f"Erro ao carregar o pano de fundo: {e}")
             self.background = pygame.Surface((self.width, self.height))
             self.background.fill((0, 0, 0))  # Fundo preto 
 
     def draw_background(self):
-        """Desenha o fundo na tela."""
+        """Desenha o pano fundo na tela."""
         self.screen.blit(self.background, (0, 0))
 
     def update(self):

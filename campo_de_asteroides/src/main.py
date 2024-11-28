@@ -1,6 +1,8 @@
 
 import pygame, sys, os
 from settings import Settings
+from entidades.player import Player
+from entidades.laser import Laser
 
 
 class GameManager:
@@ -15,6 +17,15 @@ class GameManager:
         # Inicializa as configurações do jogo, como tamanho da tela e plano de fundo
         self.settings = Settings()
 
+        # Cria os grupos de sprites
+        self.player_group = pygame.sprite.GroupSingle()
+        self.laser_group = pygame.sprite.Group()
+
+        # Cria o sprite do jogador
+        self.player = Player(self.player_group, self.settings.width, self.settings.height)
+
+
+
     def run_game(self):
         """Loop principal do jogo."""
         running = True  # Variável para manter o jogo em execução
@@ -26,8 +37,11 @@ class GameManager:
                     pygame.quit()
                     sys.exit()
 
-            # Desenha o plano de fundo
+            # Desenha o pano de fundo
             self.settings.draw_background()
+
+            # Desenha a espaçonave
+            self.ship.draw()
 
             # Atualiza o conteúdo da tela
             pygame.display.flip()
