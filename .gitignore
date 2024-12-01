@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 # Arquivos a serem ignorados pelo Git
 
 # Ambiente virtual
 venv/
 
 # Cache e arquivos compilados
+=======
+# Ignorar o ambiente virtual
+venv/
+
+# Ignorar cache e arquivos compilados do Python
+>>>>>>> main
 __pycache__/
 *.pyc
 *.pyo
 
+<<<<<<< HEAD
 # Configurações do VSCode
 .vscode/
 
@@ -18,8 +26,27 @@ __pycache__/
 *~
 
 # Arquivos de compilação LaTeX
+=======
+# Ignorar logs
+*.log
+
+# Ignorar arquivos de backup ou temporários gerados por editores
+*.swp
+*.swo
+*~
+*.tmp
+
+# Ignorar arquivos gerados pelo macOS
+.DS_Store
+
+# Ignorar arquivos de compilação LaTeX
+>>>>>>> main
 docs/*.aux
 docs/*.toc
 docs/*.log
 docs/*.out
+<<<<<<< HEAD
 docs/*.pdf
+=======
+docs/*.pdf  # Se não quiser versionar o PDF gerado
+>>>>>>> main

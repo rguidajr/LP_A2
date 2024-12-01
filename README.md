@@ -63,8 +63,11 @@ Este módulo centraliza as configurações globais do jogo, como dimensões da t
 
 ---
 
+<<<<<<< HEAD
 Alunos:
 
 Romolo Guida  
 Maia Ribeiro
+=======
+>>>>>>> main
 
