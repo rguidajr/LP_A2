@@ -1,6 +1,8 @@
 import pygame
 from score import ScoreManager
 from sound_manager import SoundManager
+from entidades.meteoro_especial import MeteoroEspecial
+
 
 class CollisionManager:
     """
@@ -19,7 +21,7 @@ class CollisionManager:
         self.player = player
         self.meteor_group = meteor_group
         self.laser_group = laser_group
-        self.sound_manager = sound_manager  # Adicionado para gerenciar sons
+        self.sound_manager = sound_manager  
 
     def handle_laser_meteor_collisions(self, score_manager):
         """
@@ -28,11 +30,16 @@ class CollisionManager:
         for laser in self.laser_group:
             hit_meteoros = pygame.sprite.spritecollide(laser, self.meteor_group, True)
             if hit_meteoros:
-                laser.kill()
-                score_manager.add_score(len(hit_meteoros) * 10)
+                laser.kill() # remove o laser após colisão
+                for meteoro in hit_meteoros:
+                    # Verifica se é um MeteoroEspecial
+                    if isinstance(meteoro, MeteoroEspecial):
+                        score_manager.add_score(50)  # 50 pontos oara meteoro especial
+                    else:
+                        score_manager.add_score(10)  # Pontuação padrão para meteoros normais
+                    meteoro.kill()
                 self.sound_manager.play_explosion()
-                print("Colisão: Laser atingiu meteoro!")
-
+                
     def handle_player_meteor_collision(self):
         """
         Verifica e lida com colisões entre o jogador e meteoros.
@@ -43,9 +50,10 @@ class CollisionManager:
         if pygame.sprite.spritecollide(self.player, self.meteor_group, True):
             self.sound_manager.play_explosion()  # Adiciona o som de explosão
             self.player.lose_life()
-            #if not self.player.is_alive():
-                #print("Game Over!")
-            return True  
+
+            # Verifica se o jogador ainda tem vidas
+            if not self.player.is_alive():
+                return True  
         return False
 
 

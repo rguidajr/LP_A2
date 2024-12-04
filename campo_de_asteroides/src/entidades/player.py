@@ -2,31 +2,6 @@ import pygame
 import os
 
 
-class Laser(pygame.sprite.Sprite):
-    """
-    Classe que representa o laser disparado pela nave.
-
-    Atributos:
-        image (pygame.Surface): Superfície do laser carregada a partir de um arquivo.
-        rect (pygame.Rect): Retângulo para posicionamento e colisão do laser.
-    """
-
-    def _init_(self,pos, speed_settings):
-        """
-        Inicializa o laser com uma imagem e posiciona-o no topo da nave.
-
-        Args:
-            pos (tuple): Posição inicial do laser no formato (x, y), com base na nave.
-        """
-        super()._init_()
-        
-        # Caminho absoluto para a imagem do laser
-        base_path = os.path.dirname(os.path.abspath(_file_))
-        image_path = os.path.join(base_path, '../../assets/imagens/la…
-import pygame
-import os
-
-
 
 class Player(pygame.sprite.Sprite):
     """
@@ -39,7 +14,7 @@ class Player(pygame.sprite.Sprite):
         screen_height (int): Altura da tela.
     """
 
-    def _init_(self, groups, screen_width, screen_height, settings):
+    def __init__(self, groups, screen_width, screen_height, settings):
         """
         Inicializa a nave e a posiciona no centro inferior da tela.
 
@@ -48,14 +23,14 @@ class Player(pygame.sprite.Sprite):
             screen_width (int): Largura da tela.
             screen_height (int): Altura da tela.
         """
-        super()._init_(groups)
+        super().__init__(groups)
 
          # Velocidade de movimento e quantidade de vidas do jogador
         self.settings = settings
         self.lives = 3
 
         # Caminho para a imagem da nave
-        base_path = os.path.dirname(os.path.abspath(_file_))
+        base_path = os.path.dirname(os.path.abspath(__file__))
         image_path = os.path.join(base_path, '../../assets/imagens/ship.png')
 
         try:
@@ -107,9 +82,6 @@ class Player(pygame.sprite.Sprite):
         if keys[pygame.K_DOWN] or keys[pygame.K_s]:  # Setas ou tecla 'S'
             self.rect.y += speed
         
-        # Aplica o deslocamento
-        #self.rect.x += dx
-        #self.rect.y += dy
             
         # Limita o movimento da nave aos limites da tela
         if self.rect.left < 0:
@@ -120,3 +92,5 @@ class Player(pygame.sprite.Sprite):
             self.rect.top = 0
         if self.rect.bottom > self.screen_height:
             self.rect.bottom = self.screen_height
+
+        

@@ -3,17 +3,14 @@ import pygame,os
 class Settings:
 
     """classe que armazena as configurações do jogo campo de asteróides """
-    # Screen
     def __init__(self):
 
         # Configurações de tela
         self.width = 1200 # Largura da tela
         self.height = 720 # Altura da tela
-        #screen_size = (self.width, self.height)
-
+        
         # Inicialização da tela
         self.screen = pygame.display.set_mode((self.width, self.height))  # Inicializa a janela
-        #self.screen.fill((0, 0, 0))
         pygame.display.set_caption('Campo de Asteroides')
 
         # Caminho absoluto para a imagem de fundo
@@ -30,15 +27,32 @@ class Settings:
             self.background = pygame.Surface((self.width, self.height))
             self.background.fill((0, 0, 0))  # Fundo preto 
 
+        # Configuração do relógio e Delta Time
+        self.clock = pygame.time.Clock()
+        self.delta_time = 0
+
+        # Temporizador para eventos no jogo
+        self.meteor_timer = pygame.USEREVENT + 1
+        #self.meteor_spawn_time = 1500  # Tempo em milissegundos (1.5 segundos)
+        
+
+    def configure_timers(self, spawn_time):
+        """Configura os temporizadores do jogo."""
+        pygame.time.set_timer(self.meteor_timer, 0)  # Cancela qualquer temporizador ativo
+        pygame.time.set_timer(self.meteor_timer,spawn_time)
+
+
     def draw_background(self):
-        """Desenha o pano fundo na tela."""
+        """Desenha o pano fundo na tela. Esta como funcao para upgrades futuros no caso de multiploa niveis"""
         self.screen.blit(self.background, (0, 0))
 
     def update(self):
-        pass
-        
-        
-    
+        """
+        Atualiza configurações globais do jogo, como Delta Time e FPS.
+        """
+        # Atualiza o Delta Time
+        self.delta_time = min(self.clock.tick(60) / 1000, 0.033)
 
-    
-        
+        # Exibe os FPS no título da janela (opcional)
+        fps = self.clock.get_fps()
+        pygame.display.set_caption(f"Campo de Asteroides - FPS: {fps:.2f}")

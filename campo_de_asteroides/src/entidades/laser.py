@@ -11,17 +11,17 @@ class Laser(pygame.sprite.Sprite):
         rect (pygame.Rect): Retângulo para posicionamento e colisão do laser.
     """
 
-    def _init_(self,pos, speed_settings):
+    def __init__(self,pos, speed_settings):
         """
         Inicializa o laser com uma imagem e posiciona-o no topo da nave.
 
         Args:
             pos (tuple): Posição inicial do laser no formato (x, y), com base na nave.
         """
-        super()._init_()
+        super().__init__()
         
         # Caminho absoluto para a imagem do laser
-        base_path = os.path.dirname(os.path.abspath(_file_))
+        base_path = os.path.dirname(os.path.abspath(__file__))
         image_path = os.path.join(base_path, '../../assets/imagens/laser.png')
 
         # Carregar a imagem do laser
@@ -54,4 +54,5 @@ class Laser(pygame.sprite.Sprite):
 
         # Remove o laser se sair da tela
         if self.rect.bottom < 0:
-            self.kill() 
+            self.kill()
+
