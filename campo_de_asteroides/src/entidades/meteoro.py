@@ -12,7 +12,7 @@ class Meteoro(pygame.sprite.Sprite):
         speed (int): Velocidade do meteoro.
     """
 
-    def __init__(self, screen_width, screen_height):
+    def __init__(self, screen_width, screen_height, settings):
         """
         Inicializa o meteoro.
 
@@ -21,6 +21,7 @@ class Meteoro(pygame.sprite.Sprite):
             screen_height (int): Altura da tela.
         """
         super().__init__()
+        self.settings = settings
 
         # Caminho para a imagem do meteoro
         base_path = os.path.dirname(os.path.abspath(__file__))
@@ -43,13 +44,13 @@ class Meteoro(pygame.sprite.Sprite):
         self.rect.y = -self.rect.height  # Começa fora da tela, acima do topo
 
         # Define a velocidade do meteoro
-        self.speed = random.randint(3, 8)  # Velocidade variável
+        self.speed = random.uniform(self.settings.meteor_speed * 0.8, self.settings.meteor_speed * 1.2)  # Velocidade variável
 
-    def update(self):
+    def update(self,delta_time):
         """
         Atualiza a posição do meteoro, movendo-o para baixo.
         """
-        self.rect.y += self.speed
+        self.rect.y += self.speed * self.settings.delta_time
         # Remove o meteoro se ele sair da tela
-        if self.rect.top > self.rect.height + self.rect.bottom:  
+        if self.rect.top > self.settings.height:  
             self.kill() # Exclui fora da tela
