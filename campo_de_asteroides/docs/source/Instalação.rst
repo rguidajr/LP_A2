@@ -1,35 +1,55 @@
-nstalação
+==========================
+Guia de Instalação e Uso
+==========================
 
+Este documento descreve como instalar e rodar o jogo **Campo de Asteroides**.
 
-Para instalar o projeto, siga estas etapas:
+Pré-requisitos
+==============
 
-1. Pré-requisitos: Certifique-se de ter Python 3.x instalado em seu sistema.
+Certifique-se de ter o seguinte instalado no seu sistema:
 
-2. Criação de um Ambiente Virtual (opcional): É recomendável criar um ambiente virtual para isolar as dependências do projeto. Você pode fazer isso usando o `venv` ou `virtualenv`. 
+- **Python** (versão 3.9 ou superior).
+- **Pygame**, que será instalado automaticamente ao seguir as instruções abaixo.
 
-Exemplo:
+Passos para Instalação
+=======================
 
-    Criando o ambiente virtual
+1. **Clonar ou Baixar o Projeto**
+   - Clone o repositório do GitHub usando o comando:
+   
+     .. code-block:: bash
 
-    python -m venv meu_ambiente_virtual
+        git clone https://github.com/rguidajr/LP_A2.git
 
-    Ativando o ambiente virtual
-    
-    meu_ambiente_virtual\Scripts\activate  # Windows
+   - Ou baixe o projeto como arquivo ZIP e extraia o conteúdo.
 
-    source meu_ambiente_virtual/bin/activate  # Linux/macOS
+2. **Instalar Dependências**
+   - Navegue até o diretório principal do projeto, onde está localizado o arquivo ``requirements.txt``:
 
-    
-Instalação do Projeto: Use o `pip` para instalar o projeto e suas dependências:
+     .. code-block:: bash
 
+        cd campo_de_asteroides
 
->>>   pip install -r requirements.txt
+   - Instale as dependências necessárias executando o seguinte comando:
 
+     .. code-block:: bash
 
-4. Execução do Projeto: Agora você pode executar o projeto:
+        pip install -r requirements.txt
 
- 
- meu_projeto
- 
+Passos para Rodar o Jogo
+========================
 
-Isso é tudo! O projeto agora está instalado e em funcionamento em seu ambiente.
+1. Navegue até o diretório ``src`` onde está o arquivo principal do jogo ``main.py``:
+
+   .. code-block:: bash
+
+      cd src
+
+2. Execute o jogo com o seguinte comando:
+
+   .. code-block:: bash
+
+      python main.py
+
+Pronto! O jogo será iniciado.
