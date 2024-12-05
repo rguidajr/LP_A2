@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; Documentação Campo de asteroiddes - Jogo em pygame (LP_A2) 1.0</title>
+    <title>Guia de Instalação e Uso &#8212; Documentação Campo de asteroiddes - Jogo em pygame (LP_A2) 1.0</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=61cd365c" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
     <script src="_static/documentation_options.js?v=05d536ce"></script>
@@ -14,6 +14,7 @@
     <script src="_static/translations.js?v=000972dd"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="LP_A2" href="modules.html" />
     <link rel="prev" title="Tecnologia" href="Tecnologia.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -32,31 +33,65 @@
 
           <div class="body" role="main">
             
-  <p>nstalação</p>
-<p>Para instalar o projeto, siga estas etapas:</p>
-<ol class="arabic simple">
-<li><p>Pré-requisitos: Certifique-se de ter Python 3.x instalado em seu sistema.</p></li>
-<li><p>Criação de um Ambiente Virtual (opcional): É recomendável criar um ambiente virtual para isolar as dependências do projeto. Você pode fazer isso usando o <cite>venv</cite> ou <cite>virtualenv</cite>.</p></li>
-</ol>
-<p>Exemplo:</p>
+  <section id="guia-de-instalacao-e-uso">
+<h1>Guia de Instalação e Uso<a class="headerlink" href="#guia-de-instalacao-e-uso" title="Link para este cabeçalho">¶</a></h1>
+<p>Este documento descreve como instalar e rodar o jogo <strong>Campo de Asteroides</strong>.</p>
+<section id="pre-requisitos">
+<h2>Pré-requisitos<a class="headerlink" href="#pre-requisitos" title="Link para este cabeçalho">¶</a></h2>
+<p>Certifique-se de ter o seguinte instalado no seu sistema:</p>
+<ul class="simple">
+<li><p><strong>Python</strong> (versão 3.9 ou superior).</p></li>
+<li><p><strong>Pygame</strong>, que será instalado automaticamente ao seguir as instruções abaixo.</p></li>
+</ul>
+</section>
+<section id="passos-para-instalacao">
+<h2>Passos para Instalação<a class="headerlink" href="#passos-para-instalacao" title="Link para este cabeçalho">¶</a></h2>
+<ol class="arabic">
+<li><p><strong>Clonar ou Baixar o Projeto</strong>
+- Clone o repositório do GitHub usando o comando:</p>
 <blockquote>
-<div><p>Criando o ambiente virtual</p>
-<p>python -m venv meu_ambiente_virtual</p>
-<p>Ativando o ambiente virtual</p>
-<p>meu_ambiente_virtualScriptsactivate  # Windows</p>
-<p>source meu_ambiente_virtual/bin/activate  # Linux/macOS</p>
-</div></blockquote>
-<p>Instalação do Projeto: Use o <cite>pip</cite> para instalar o projeto e suas dependências:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span>  <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/rguidajr/LP_A2.git
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>Execução do Projeto: Agora você pode executar o projeto:</p></li>
-</ol>
-<blockquote>
-<div><p>meu_projeto</p>
 </div></blockquote>
-<p>Isso é tudo! O projeto agora está instalado e em funcionamento em seu ambiente.</p>
+<ul class="simple">
+<li><p>Ou baixe o projeto como arquivo ZIP e extraia o conteúdo.</p></li>
+</ul>
+</li>
+<li><p><strong>Instalar Dependências</strong>
+- Navegue até o diretório principal do projeto, onde está localizado o arquivo <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>campo_de_asteroides
+</pre></div>
+</div>
+</div></blockquote>
+<ul>
+<li><p>Instale as dependências necessárias executando o seguinte comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="passos-para-rodar-o-jogo">
+<h2>Passos para Rodar o Jogo<a class="headerlink" href="#passos-para-rodar-o-jogo" title="Link para este cabeçalho">¶</a></h2>
+<ol class="arabic">
+<li><p>Navegue até o diretório <code class="docutils literal notranslate"><span class="pre">src</span></code> onde está o arquivo principal do jogo <code class="docutils literal notranslate"><span class="pre">main.py</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>src
+</pre></div>
+</div>
+</li>
+<li><p>Execute o jogo com o seguinte comando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>main.py
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Pronto! O jogo será iniciado.</p>
+</section>
+</section>
 
 
           </div>
@@ -76,8 +111,16 @@
 
 <h3>Navegação</h3>
 <p class="caption" role="heading"><span class="caption-text">Conteúdo:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Tecnologia.html">Tecnologia</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guia de Instalação e Uso</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pre-requisitos">Pré-requisitos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#passos-para-instalacao">Passos para Instalação</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#passos-para-rodar-o-jogo">Passos para Rodar o Jogo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">LP_A2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">tests package</a></li>
 </ul>
 
 <div class="relations">
@@ -85,6 +128,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="Tecnologia.html" title="capítulo anterior">Tecnologia</a></li>
+      <li>Next: <a href="modules.html" title="próximo capítulo">LP_A2</a></li>
   </ul></li>
 </ul>
 </div>

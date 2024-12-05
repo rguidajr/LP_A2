@@ -6,9 +6,9 @@
 Bem-vindo a documentação Campo de asteroiddes - Jogo em pygame (LP_A2)
 =========================================================================
 
- Campo de Asteroides
+ **Campo de Asteroides**
 
-**Campo de Asteroides** é um projeto desenvolvido em Python utilizando a biblioteca Pygame. Este trabalho faz parte da disciplina **Linguagem de Programação** do curso de Matemática Aplicada da **FGV**, sob orientação do **Prof. Matheus**, e será avaliado como nota da segunda prova.
+Campo de Asteroides é um projeto desenvolvido em Python utilizando a biblioteca Pygame. Este trabalho faz parte da disciplina **Linguagem de Programação** do curso de Matemática Aplicada da **FGV**, sob orientação do **Prof. Matheus**, e será avaliado como nota da segunda prova.
 
 O objetivo do jogo é criar um ambiente onde o jogador controla uma nave espacial para desviar ou atirar contra asteroides que colidem espontaneamente com a tela. A seguir, detalhamos a estrutura do projeto e as funcionalidades implementadas até agora.
 
