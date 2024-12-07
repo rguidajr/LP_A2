@@ -79,6 +79,20 @@ A documentação foi gerada utilizando o **Sphinx** e está disponível no forma
    ```bash
    cd campo_de_asteroides/docs/build/html
 
+## Como Rodar os Testes Unitários
+
+O projeto utiliza o módulo `unittest` do Python para validar funcionalidades. Siga os passos abaixo para rodar os testes:
+
+1. Certifique-se de que está no diretório raiz do projeto:
+   ```bash
+   cd caminho/para/o/projeto/campo_de_asteroides
+
+2. Certifique-se de que está no diretório raiz do projeto:
+   ```bash
+   python -m unittest tests/test_collision.py
+
+
+
 ## Autores
 
 Este projeto foi desenvolvido por:
